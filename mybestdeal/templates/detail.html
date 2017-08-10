@@ -52,7 +52,7 @@
                             <del class="text-muted">${{ product.old_price }}</del>
                         {% endif %}
                     </h2>
-                    <a href="{{ product.deal_link }}" class="btn btn-success btn-lg btn-block">See Deal</a>
+                    <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-lg btn-block">See Deal</a>
 
                 </div>
                 <div class="col-md-12">
@@ -98,7 +98,7 @@
                                     {% endif %}
                               </p>
                               <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/" class="btn btn-info">Details</a>
-                              <a href="{{ product.deal_link }}" class="btn btn-success">See Deal</a>
+                              <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success">See Deal</a>
                             </div>
                         </div>
 
