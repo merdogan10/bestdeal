@@ -10,7 +10,7 @@
         <form class="search" role="search" method="get" action="/search">
             {% csrf_token %}
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control" name="q" value="" placeholder="Search Deals">
+                <input type="text" class="form-control" name="q" value="" placeholder="Search Deals" required>
                 <div class="input-group-btn">
                     <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
                 </div>
@@ -51,10 +51,11 @@
             {% endif %}
 
         </div>
-
-        <div class="col-md-12">
-            <hr>
-        </div>
+        {% if not number_of_deals %}
+            <div class="col-md-12">
+                <hr>
+            </div>
+        {% endif %}
 
         <!-- Latest deals -->
         <div class="col-md-2">

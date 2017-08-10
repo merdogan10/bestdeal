@@ -38,7 +38,7 @@
                 <form class="navbar-form navbar-right" role="search" method="get" action="/search">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input type="text" class="form-control" name="q" value="" placeholder="Search Deals">
+                        <input type="text" class="form-control" name="q" value="" placeholder="Search Deals" required>
                         <div class="input-group-btn">
                             <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
                         </div>

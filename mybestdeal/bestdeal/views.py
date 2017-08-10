@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Product, Sub_Category, Category
 
 def index(request):
@@ -8,6 +8,8 @@ def index(request):
 
 def search_view(request):
     search_query = request.GET['q']
+    if search_query == "":
+        return redirect(index)
     all_products = Product.objects.filter(name__contains=search_query)
     return render(request, 'index.html', {"all_products": all_products, 'categories': Category.objects.all(),'search_query':search_query})
 
