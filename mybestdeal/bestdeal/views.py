@@ -6,6 +6,11 @@ def index(request):
     all_products = Product.objects.all()
     return render(request, 'index.html', {"all_products": all_products, 'categories': Category.objects.all(),'number_of_deals':Product.objects.count()})
 
+def search_view(request):
+    search_query = request.GET['q']
+    all_products = Product.objects.filter(name__contains=search_query)
+    return render(request, 'index.html', {"all_products": all_products, 'categories': Category.objects.all(),'search_query':search_query})
+
 def detail(request, product_id, category_name, sub_category_name):
     all_products = Product.objects.all()
     category_products = Product.objects.filter(sub_category__category__category_name=category_name,

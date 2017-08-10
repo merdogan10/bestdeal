@@ -35,7 +35,8 @@
 
                 </ul>
 
-                <form class="navbar-form navbar-right" role="search" method="get" action="#">
+                <form class="navbar-form navbar-right" role="search" method="get" action="/search">
+                    {% csrf_token %}
                     <div class="input-group">
                         <input type="text" class="form-control" name="q" value="" placeholder="Search Deals">
                         <div class="input-group-btn">

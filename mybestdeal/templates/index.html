@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% block body %}
-{% if categories %}
+{% if number_of_deals %}
 <div class="jumbotron">
     <div class="container text-center ">
         <h1 class="jumbotrontext">My Best Deal</h1>
         <h1 class="jumbotrontext">Best Deals & Promotions</h1>
 
 
-        <form class="search" role="search" method="get" action="#">
+        <form class="search" role="search" method="get" action="/search">
+            {% csrf_token %}
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control" name="q" value="" placeholder="Search Deals">
                 <div class="input-group-btn">
@@ -38,13 +39,13 @@
                 {% endif %}
                 {% if sub_category %}
                     <h1>{{ sub_category }} Deals</h1>
-                {% else %}
-                    {% if category %}
-                        <h1>{{ category }} Deals</h1>
-                    {% endif %}
+                {% elif category %}
+                    <h1>{{ category }} Deals</h1>
+                {% elif not number_of_deals %}
+                    <h1>Search Results for '{{ search_query }}' </h1>
                 {% endif %}
             </div>
-            {% if sub_category %}
+            {% if not number_of_deals %}
                 <div class="col-md-8 reklam" style="height:150px;background: white;"></div>
                 </div>
             {% endif %}
