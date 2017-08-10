@@ -1,0 +1,13 @@
+{% for category in categories %}
+
+    <li class="dropdown">
+        <a href="/{{ category.category_name }}/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{ category.category_name }}</a>
+        <ul class="dropdown-menu">
+            {% for sub_category in sub_categories %}
+                {% if sub_category.category.category_name == category.category_name %}
+                    <li><a href="/{{ category.category_name }}/{{ sub_category.sub_category_name }}/">{{ sub_category.sub_category_name }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}

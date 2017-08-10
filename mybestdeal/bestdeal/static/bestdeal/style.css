@@ -1,0 +1,80 @@
+body{
+    background: white url("images/background.jpg");
+    position: relative;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy',cursive;
+}
+
+.card{
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mycardtitle{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.mycard{
+    width: 100%;
+    height:373px;
+    background: white;
+    margin: 11px;
+    padding: 4px;
+}
+
+.card:hover{
+    background: mintcream;
+
+}
+
+.min-100 {
+    min-height: 100vh;
+}
+
+
+footer a {
+    color: #ccc;
+}
+.footer-text {
+    color: #ccc;
+}
+.pr-0{
+    padding-right: 0;
+}
+.ml-auto{
+    margin-left: auto;
+}
+.pl-0{
+    padding-left: 0;
+}
+.paddingy{
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.social{
+    display:inline-block;
+    float:right;
+}
+
+.listhover:hover {
+    font-weight:bold;
+}
+.jumbotron{
+    background: url("http://www.imgim.com/deal.png");
+    color: whitesmoke;
+    height: 500px;
+    top: -20px;
+    position: relative;
+}
+.jumbotrontext{
+    font-weight: 900;
+}

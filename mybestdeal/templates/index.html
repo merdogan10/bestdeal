@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% block body %}
+{% if categories %}
+<div class="jumbotron">
+    <div class="container text-center ">
+        <h1 class="jumbotrontext">My Best Deal</h1>
+        <h1 class="jumbotrontext">Best Deals & Promotions</h1>
+
+
+        <form role="search" role="search" method="get" action="#">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" name="q" value="" placeholder="Search Deals">
+                <div class="input-group-btn">
+                    <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
+                </div>
+            </div>
+        </form>
+
+        <h3>{{ number_of_deals }} Deals are Available Now</h3>
+    </div>
+</div>
+{% endif %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="col-md-4">
+                {% if category %}
+                    <h5 class="text-muted">
+                        Categories >
+                        <a class="text-muted" href="/{{ category }}/">{{ category }}</a>
+                        {% if sub_category %}
+                            >
+                            <a class="text-muted" href="/{{ category }}/{{ sub_category }}/">{{ sub_category }}</a>
+                        {% endif %}
+                    </h5>
+                {% endif %}
+                {% if sub_category %}
+                    <h1>{{ sub_category }} Deals</h1>
+                {% else %}
+                    {% if category %}
+                        <h1>{{ category }} Deals</h1>
+                    {% endif %}
+                {% endif %}
+            </div>
+            {% if sub_category %}
+                <div class="col-md-8 reklam" style="height:150px;background: white;"></div>
+                </div>
+            {% endif %}
+
+        </div>
+
+        <div class="col-md-12">
+            <hr>
+        </div>
+
+        <!-- Latest deals -->
+        <div class="col-md-2">
+
+            <div class="card col-md-12" style="background: white;margin-top: 10px;">
+
+                <div class="list-group">
+                <h3> Shop deals for</h3>
+                {% if sub_categories %}
+                    {% for sub_category_item in sub_categories %}
+                        {% if sub_category_item.category.category_name == category %}
+                               {% if sub_category_item.sub_category_name == sub_category %}
+                                    <a href="/{{ sub_category_item.category.category_name }}/{{ sub_category_item.sub_category_name }}" class="list-group-item list-group-item-action active">{{ sub_category_item.sub_category_name }}</a>
+                               {% else %}
+                                   <a href="/{{ sub_category_item.category.category_name }}/{{ sub_category_item.sub_category_name }}" class="list-group-item list-group-item-action listhover" style="border: none">{{ sub_category_item.sub_category_name }}</a>
+                               {% endif %}
+
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% for category_item in categories %}
+                        {% if sub_category_item.category.category_name == category %}
+                            <a href="/{{ category_item.category_name }}/" class="list-group-item list-group-item-action listhover" style="border: none">{{ category_item.category_name }}</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Category Products Grid -->
+        <div class="col-md-10">
+
+            <div class="row equal">
+            {% if category_products %}
+                {% for product in category_products %}
+                    <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card text-center mycard">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <a class="text-right" href="https://www.amazon.com">
+                                      <img class="card-img-top" src="http://media.corporate-ir.net/media_files/IROL/17/176060/img/logos/amazon_logo_RGB.jpg" height="20">
+                                  </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/">
+                                        <img class="card-img-top" src="{{ product.photo_url }}" alt="Card image cap" height="200" style="padding: 10px;">
+                                    </a>
+                                </div>
+                            </div>
+
+
+                          <div class="card-block text-center">
+                            <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/">{{ product.name }}</a></h4>
+                            <p class="card-text">
+                                Price: <span class="text-danger">${{ product.price }}</span>
+                                {% if product.price != product.old_price %}
+                                  <del class="text-muted">${{ product.old_price }}</del>
+                                {% endif %}
+                            </p>
+                            <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/" class="btn btn-info btn-block">Details</a>
+                            <a href="{{ product.deal_link }}" class="btn btn-success btn-block">See Deal</a>
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                {% for product in all_products %}
+                    <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card text-center mycard">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <a class="text-right" href="https://www.amazon.com">
+                                      <img class="card-img-top" src="http://media.corporate-ir.net/media_files/IROL/17/176060/img/logos/amazon_logo_RGB.jpg" height="20">
+                                  </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/">
+                                        <img class="card-img-top" src="{{ product.photo_url }}" alt="Card image cap" height="200" style="padding: 10px;">
+                                    </a>
+                                </div>
+                            </div>
+
+
+                          <div class="card-block text-center">
+                            <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/">{{ product.name }}</a></h4>
+                            <p class="card-text">
+                                Price: <span class="text-danger">${{ product.price }}</span>
+                                {% if product.price != product.old_price %}
+                                  <del class="text-muted">${{ product.old_price }}</del>
+                                {% endif %}
+                            </p>
+                            <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/" class="btn btn-info btn-block">Details</a>
+                            <a href="{{ product.deal_link }}" class="btn btn-success btn-block">See Deal</a>
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

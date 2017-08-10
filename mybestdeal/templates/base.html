@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Best Deal{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bestdeal/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'index' %}">MyBestDeal</a>
+            </div>
+
+            <!-- Items -->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    {% load menu_items %}
+                    {% menu_items %}
+
+                </ul>
+
+                <form class="navbar-form navbar-right" role="search" method="get" action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="q" value="">
+                    </div>
+                    <button type="button" class="btn btn-default">Search</button>
+                </form>
+
+            </div>
+
+        </div>
+    </nav>
+    <script>
+        $('.dropdown').on('mouseenter mouseleave click tap', function() {
+          $(this).toggleClass("open");
+        });
+    </script>
+    {% block body %}
+    {% endblock %}
+
+<footer class="navbar-inverse text-white paddingy">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="/static/bestdeal/images/icon.png/" class="img-responsive"/>
+            </div>
+            <div class="col-md-offset-1 col-md-3 col-sm-6 pl-0">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 pl-0">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">More</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Legal</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ml-auto text-right">
+                <small class="text-uppercase footer-text">Connect on social media</small>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item social"><a href="#" class="nav-link pr-0"><i class="fa fa-pinterest fa-lg"></i></a></li>
+                    <li class="nav-item social"><a href="#" class="nav-link pr-0"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item social"><a href="#" class="nav-link pr-0"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    <li class="nav-item social"><a href="#" class="nav-link pr-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item social"><a href="#" class="nav-link pr-0"><i class="fa fa-skype fa-lg"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-right small">
+                    <p class="footer-text"> @2017 MyBestDeal.Today</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
