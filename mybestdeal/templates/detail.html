@@ -43,13 +43,13 @@
                 <div class="col-md-8">
 
                     <p>{{ product.short_description|safe }}</p>
-                    <p>{{ product.long_description|safe}}</p>
+
 
 
                     <h2 class="card-text">
                         Price: <span class="text-danger">${{ product.price }}</span>
                         {% if product.price != product.old_price %}
-                            <del class="text-muted">${{ product.old_price }}</del>
+                            <del class="text-muted">${{ product.old_price }}</del>  <strong class="text-success">{{ product.offdeal }}% off</strong>
                         {% endif %}
                     </h2>
                     <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-lg btn-block">See Deal</a>
@@ -57,6 +57,10 @@
                 </div>
                 <div class="col-md-12">
                     <p><span class="glyphicon glyphicon-info-sign"></span> If you purchase something through a post on our site, MyBestDeal.Today may get a small share of the sale.</p>
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <p>{{ product.long_description|safe}}</p>
                 </div>
             </div>
 
@@ -94,7 +98,7 @@
                               <p class="card-text">
                                   Price: <span class="text-danger">${{ product.price }}</span>
                                     {% if product.price != product.old_price %}
-                                      <del class="text-muted">${{ product.old_price }}</del>
+                                      <del class="text-muted">${{ product.old_price }}</del>  <strong class="text-success">{{ product.offdeal }}% off</strong>
                                     {% endif %}
                               </p>
                               <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.id }}/" class="btn btn-info">Details</a>

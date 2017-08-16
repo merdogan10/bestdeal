@@ -28,3 +28,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.brand+" - "+self.name
+
+    def offdeal(self):
+        return round(100*(self.old_price-self.price)/self.old_price)
