@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import slugify
-from datetime import datetimegi
+from datetime import datetime
 
 class Category(models.Model):
     category_name = models.CharField(max_length=100)
