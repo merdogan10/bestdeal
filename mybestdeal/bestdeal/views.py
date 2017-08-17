@@ -13,12 +13,12 @@ def search_view(request):
     all_products = Product.objects.filter(name__contains=search_query).order_by('-id')
     return render(request, 'index.html', {"all_products": all_products, 'categories': Category.objects.all(),'search_query':search_query})
 
-def detail(request, product_id, category_name, sub_category_name):
+def detail(request, slug, category_name, sub_category_name):
     all_products = Product.objects.all().order_by('-id')
     category_products = Product.objects.filter(sub_category__category__category_name=category_name,
                                                sub_category__sub_category_name=sub_category_name).order_by('-id')
     try:
-        product = Product.objects.get(pk=product_id)
+        product = Product.objects.get(slug=slug)
     except Product.DoesNotExist:
         raise Http404("Product does not exist")
     return render(request, 'detail.html', {"product": product,"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name})

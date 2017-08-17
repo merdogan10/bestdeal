@@ -1,5 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.template.defaultfilters import slugify
+from datetime import datetimegi
 
 class Category(models.Model):
     category_name = models.CharField(max_length=100)
@@ -23,6 +25,14 @@ class Product(models.Model):
     old_price = models.FloatField()
     price = models.FloatField()
     sub_category = models.ForeignKey(Sub_Category,on_delete=models.CASCADE, null=True)
+    date = models.DateTimeField(default=datetime.now, blank=True)
+    slug = models.SlugField(('slug'), max_length=300, blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.name)
+        super(Product, self).save(*args, **kwargs)
+
     def get_absolute_url(self):
         return reverse('detail', kwargs={'pk':self.pk})
 
