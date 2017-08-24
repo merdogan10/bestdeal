@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 from bestdeal import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -13,3 +14,4 @@ urlpatterns = [
     url(r'^(?P<category_name>[A-Za-z &]+)/$',views.category_items,name='category_items'),
     url(r'^(?P<category_name>[A-Za-z &]+)/(?P<sub_category_name>[A-Za-z &]+)/$',views.category_sub_category_items,name='category_sub_category_items'),
 ]
+urlpatterns += staticfiles_urlpatterns()
