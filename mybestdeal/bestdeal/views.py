@@ -1,4 +1,3 @@
-from django.http import Http404
 from django.shortcuts import render, redirect
 from .models import Product, Sub_Category, Category
 
@@ -20,7 +19,7 @@ def detail(request, slug, category_name, sub_category_name):
     try:
         product = Product.objects.get(slug=slug)
     except Product.DoesNotExist:
-        raise Http404("Product does not exist")
+        return redirect(index)
     return render(request, 'detail.html', {"product": product,"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name})
 
 def category_items(request, category_name):
