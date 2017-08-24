@@ -1,0 +1,7 @@
+mybestdeal.today {
+    root ~/bestdeal/mybestdeal
+    proxy / localhost:8000 {
+        transparent
+	except bestdeal/static
+    }
+}
