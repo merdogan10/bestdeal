@@ -64,12 +64,12 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+            <state relative-caret-position="390">
+              <caret line="84" column="60" selection-start-line="84" selection-start-column="60" selection-end-line="84" selection-end-column="60" />
               <folding>
                 <element signature="e#2798#2824#0#HTML" expanded="true" />
-                <element signature="e#5632#5670#0#HTML" expanded="true" />
-                <element signature="e#6145#6174#0#HTML" expanded="true" />
+                <element signature="e#6111#6149#0#HTML" expanded="true" />
+                <element signature="e#6624#6653#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +125,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1985" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
@@ -612,7 +612,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30735213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1049,12 +1049,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        <state relative-caret-position="390">
+          <caret line="84" column="60" selection-start-line="84" selection-start-column="60" selection-end-line="84" selection-end-column="60" />
           <folding>
             <element signature="e#2798#2824#0#HTML" expanded="true" />
-            <element signature="e#5632#5670#0#HTML" expanded="true" />
-            <element signature="e#6145#6174#0#HTML" expanded="true" />
+            <element signature="e#6111#6149#0#HTML" expanded="true" />
+            <element signature="e#6624#6653#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
