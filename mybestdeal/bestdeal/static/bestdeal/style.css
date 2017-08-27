@@ -101,3 +101,14 @@ footer a {
 .jumbotrontext{
     font-weight: 900;
 }
+
+.fb-share-button span {
+   top: 1px;
+}
+.twitter-share-button {
+    margin: 0;
+    padding: 0;
+}
+iframe#twitter-widget-0 {
+    vertical-align : bottom;
+}
