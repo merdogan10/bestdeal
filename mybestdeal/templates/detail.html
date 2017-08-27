@@ -1,16 +1,30 @@
 {% extends 'base.html' %}
 {% block title %}Product Details{% endblock %}
+{% block socialblock %}
+    <meta property="og:url"           content="https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="{{ product.name|slice:":96" }}" />
+    <meta property="og:description"   content="{{ product.short_description|safe|slice:":200" }}" />
+    <meta property="og:image"         content="{{ product.photo_url }}" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mybestdealtoday">
+    <meta name="twitter:title" content="{{ product.name|slice:":96" }}">
+    <meta name="twitter:description" content="{{ product.short_description|safe|slice:":200" }}">
+    <meta name="twitter:creator" content="@mybestdealtoday">
+    <meta name="twitter:image" content="{{ product.photo_url }}">
+    <meta name="twitter:domain" content="mybestdeal.today">
+{% endblock %}
 {% block body %}
 
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@mybestdealtoday">
-<meta name="twitter:title" content="{{ product.name|slice:":96" }}">
-<meta name="twitter:description" content="{{ product.short_description|safe|slice:":200" }}">
-<meta name="twitter:creator" content="@mybestdealtoday">
-<meta name="twitter:image" content="{{ product.photo_url }}">
-<meta name="twitter:domain" content="mybestdeal.today">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container-fluid">
     <div class="row">
@@ -66,6 +80,8 @@
 
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ product.name|slice:":96" }}...&hashtags=mybestdealtoday">Tweet</a>
+
+                    <div class="fb-share-button" data-href="https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/&amp;src=sdkpreparse">Paylaş</a></div>
                     <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-lg btn-block">See Deal</a>
 
                 </div>
