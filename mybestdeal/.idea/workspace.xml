@@ -54,8 +54,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="96" column="53" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+            <state relative-caret-position="367">
+              <caret line="97" column="76" selection-start-line="97" selection-start-column="76" selection-end-line="97" selection-end-column="76" />
               <folding>
                 <element signature="e#1416#1442#0#HTML" expanded="true" />
                 <element signature="e#3438#3476#0#HTML" expanded="true" />
@@ -114,7 +114,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1985" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
@@ -594,7 +594,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30735213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1031,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="96" column="53" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+        <state relative-caret-position="367">
+          <caret line="97" column="76" selection-start-line="97" selection-start-column="76" selection-end-line="97" selection-end-column="76" />
           <folding>
             <element signature="e#1416#1442#0#HTML" expanded="true" />
             <element signature="e#3438#3476#0#HTML" expanded="true" />
