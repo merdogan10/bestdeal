@@ -89,12 +89,12 @@
                 {% if category_products %}
                     {% for product in category_products|slice:":5" %}
                       <div class="card col-md-12" style="background: white;margin: 1px;">
-                        <div class="col-md-4">
+                        <div class="col-md-6 col-lg-5">
                             <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/">
-                                <img src="{{ product.photo_url }}" width="100px" class="w-100 img-responsive" style="max-height: 300px;">
+                                <img src="{{ product.photo_url }}" class="cardimagemore">
                             </a>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-6 col-lg-7">
                             <div class="card-block">
                               <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/">{{ product.name }}</a></h4>
                               <p class="card-text">
