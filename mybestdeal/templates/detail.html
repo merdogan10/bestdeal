@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block title %}{{ product.name|slice:":96" }}...{% endblock %}
-{% block faceblock %}{{ product.name|slice:":96" }}...{% endblock %}
 {% block socialblock %}
     <meta property="og:url"           content="https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" />
     <meta property="og:type"          content="article" />
@@ -81,8 +80,6 @@
 
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ product.name|slice:":96" }}...&hashtags=mybestdealtoday">Tweet</a>
-
-                    <div class="fb-share-button" data-href="https://mybestdeal.today/Toys%20&amp;%20Games/Arts%20&amp;%20Crafts/alex-toys-little-hands-paper-bag-puppets/" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmybestdeal.today%2FToys%2520%26%2520Games%2FArts%2520%26%2520Crafts%2Falex-toys-little-hands-paper-bag-puppets%2F&amp;src=sdkpreparse">Paylaş</a></div>
                     <div class="fb-share-button" data-href="https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/&src=sdkpreparse">Paylaş</a></div>
                     <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-lg btn-block">See Deal</a>
 
