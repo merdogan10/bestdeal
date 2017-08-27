@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block socialblock %}{% endblock %}
+
     <meta name="author" content="mybestdeal.today">
     <meta name="application-name" content="My Best Deal"/>
     <meta name="Description" content="My Best Deal Today - Best Deals & Promotions  -  We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.">
@@ -17,7 +17,9 @@
     <meta name="google-site-verification" content="m0CiIO96FdbUX7dLT_PrX_Y3lZoMmjo5SiKCAVy2WU8" />
     <meta name="p:domain_verify" content="c71c8fb8910e423590fdfa82775c9f14"/>
 
+    <meta property="og:title"         content="{% block faceblock %}{% endblock %}" />
 
+    {% block socialblock %}{% endblock %}
 
     <title>{% block title %}My Best Deal{% endblock %}</title>
     {% load staticfiles %}
