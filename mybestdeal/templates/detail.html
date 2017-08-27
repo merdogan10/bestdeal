@@ -4,10 +4,10 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@site_username">
-<meta name="twitter:title" content="Top 10 Things Ever">
-<meta name="twitter:description" content="Up than 200 characters.">
-<meta name="twitter:creator" content="@creator_username">
+<meta name="twitter:site" content="@mybestdealtoday">
+<meta name="twitter:title" content="{{ product.name|slice:":96" }}">
+<meta name="twitter:description" content="{{ product.short_description|safe|slice:":200" }}">
+<meta name="twitter:creator" content="@mybestdealtoday">
 <meta name="twitter:image" content="{{ product.photo_url }}">
 <meta name="twitter:domain" content="mybestdeal.today">
 
