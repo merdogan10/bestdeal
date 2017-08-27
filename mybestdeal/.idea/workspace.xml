@@ -51,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -61,15 +61,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
-                <element signature="e#2778#2804#0#HTML" expanded="true" />
-                <element signature="e#6111#6149#0#HTML" expanded="true" />
-                <element signature="e#6624#6653#0#HTML" expanded="true" />
+                <element signature="e#2798#2824#0#HTML" expanded="true" />
+                <element signature="e#6131#6169#0#HTML" expanded="true" />
+                <element signature="e#6644#6673#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,7 +126,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-1056" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
   </component>
@@ -612,7 +612,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-1056" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30735213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1039,23 +1039,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding>
-            <element signature="e#2778#2804#0#HTML" expanded="true" />
-            <element signature="e#6111#6149#0#HTML" expanded="true" />
-            <element signature="e#6624#6653#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#2798#2824#0#HTML" expanded="true" />
+            <element signature="e#6131#6169#0#HTML" expanded="true" />
+            <element signature="e#6644#6673#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
