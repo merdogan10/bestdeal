@@ -15,6 +15,25 @@ body{
     z-index: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.cardimage{
+    padding: 10px;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+.cardimagea{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.cardimagediv{
+    display: table;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
 .mycardtitle{
     width: 100%;
     white-space: nowrap;
