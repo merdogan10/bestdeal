@@ -55,11 +55,11 @@
         <entry file="file://$PROJECT_DIR$/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="58" column="123" selection-start-line="58" selection-start-column="123" selection-end-line="58" selection-end-column="123" />
+              <caret line="58" column="122" selection-start-line="58" selection-start-column="122" selection-end-line="58" selection-end-column="122" />
               <folding>
                 <element signature="e#1416#1442#0#HTML" expanded="true" />
-                <element signature="e#3681#3719#0#HTML" expanded="true" />
-                <element signature="e#4194#4223#0#HTML" expanded="true" />
+                <element signature="e#3705#3743#0#HTML" expanded="true" />
+                <element signature="e#4218#4247#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1033,11 +1033,11 @@
     <entry file="file://$PROJECT_DIR$/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="58" column="123" selection-start-line="58" selection-start-column="123" selection-end-line="58" selection-end-column="123" />
+          <caret line="58" column="122" selection-start-line="58" selection-start-column="122" selection-end-line="58" selection-end-column="122" />
           <folding>
             <element signature="e#1416#1442#0#HTML" expanded="true" />
-            <element signature="e#3681#3719#0#HTML" expanded="true" />
-            <element signature="e#4194#4223#0#HTML" expanded="true" />
+            <element signature="e#3705#3743#0#HTML" expanded="true" />
+            <element signature="e#4218#4247#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
