@@ -4,7 +4,7 @@ from bestdeal import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^zwyanezade/', admin.site.urls),
     url(r'^$',views.index,name='index'),
     url(r'^search$',views.search_view,name='search'),
     url(r'^contact/$',views.contact_view,name='contact'),
