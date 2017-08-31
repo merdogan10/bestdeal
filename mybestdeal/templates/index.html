@@ -83,8 +83,71 @@
                     {% endfor %}
                 {% endif %}
                 </div>
-            </div>
 
+
+            </div>
+            {% if category %}
+            <div class="col-md-12" style="margin-top: 10px;">
+                <div class="dropdown">
+                  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" style="width: 100%;">Sort By <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                      {% if sub_category %}
+                          {% if s == '1' %}
+                              <li class="active"><a href="/{{ category }}/{{ sub_category }}?sort=1">Newest Arrivals</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}/{{ sub_category }}?sort=1">Newest Arrivals</a></li>
+                          {% endif %}
+                          {% if s == '2' %}
+                              <li class="active"><a href="/{{ category }}/{{ sub_category }}?sort=2">Price: Low to High</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}/{{ sub_category }}?sort=2">Price: Low to High</a></li>
+                          {% endif %}
+                          {% if s == '3' %}
+                              <li class="active"><a href="/{{ category }}/{{ sub_category }}?sort=3">Price: High to Low</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}/{{ sub_category }}?sort=3">Price: High to Low</a></li>
+                          {% endif %}
+                          {% if s == '4' %}
+                              <li class="active"><a href="/{{ category }}/{{ sub_category }}?sort=4">Name: A-Z</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}/{{ sub_category }}?sort=4">Name: A-Z</a></li>
+                          {% endif %}
+                          {% if s == '5' %}
+                              <li class="active"><a href="/{{ category }}/{{ sub_category }}?sort=5">Name: Z-A</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}/{{ sub_category }}?sort=5">Name: Z-A</a></li>
+                          {% endif %}
+                      {% else %}
+                          {% if s == '1' %}
+                              <li class="active"><a href="/{{ category }}?sort=1">Newest Arrivals</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}?sort=1">Newest Arrivals</a></li>
+                          {% endif %}
+                          {% if s == '2' %}
+                              <li class="active"><a href="/{{ category }}?sort=2">Price: Low to High</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}?sort=2">Price: Low to High</a></li>
+                          {% endif %}
+                          {% if s == '3' %}
+                              <li class="active"><a href="/{{ category }}?sort=3">Price: High to Low</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}?sort=3">Price: High to Low</a></li>
+                          {% endif %}
+                          {% if s == '4' %}
+                              <li class="active"><a href="/{{ category }}?sort=4">Name: A-Z</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}?sort=4">Name: A-Z</a></li>
+                          {% endif %}
+                          {% if s == '5' %}
+                              <li class="active"><a href="/{{ category }}?sort=5">Name: Z-A</a></li>
+                          {% else %}
+                              <li><a href="/{{ category }}?sort=5">Name: Z-A</a></li>
+                          {% endif %}
+                      {% endif %}
+                  </ul>
+                </div>
+            </div>
+            {% endif %}
 
         </div>
 

@@ -23,17 +23,48 @@ def detail(request, slug, category_name, sub_category_name):
     return render(request, 'detail.html', {"product": product,"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name})
 
 def category_items(request, category_name):
-    all_products = Product.objects.all().order_by('-id')
     category_products = Product.objects.filter(sub_category__category__category_name=category_name).order_by('-id')
+    s = request.GET.get('sort')
+    if s == '1':
+        category_products = category_products.order_by('-id')
+    elif s == '2':
+        category_products = category_products.order_by('price')
+    elif s == '3':
+        category_products = category_products.order_by('-price')
+    elif s == '4':
+        category_products = category_products.order_by('name')
+    elif s == '5':
+        category_products = category_products.order_by('-name')
     if category_products:
-        return render(request, 'index.html', {"category_products": category_products,"all_products": all_products, "category": category_name, 'sub_categories': Sub_Category.objects.all().order_by('sub_category_name')})
+        if s:
+            return render(request, 'index.html', {"category_products": category_products, "category": category_name, 'sub_categories': Sub_Category.objects.all().order_by('sub_category_name'), 's':s})
+        else:
+            return render(request, 'index.html', {"category_products": category_products, "category": category_name,
+                                                  'sub_categories': Sub_Category.objects.all().order_by(
+                                                      'sub_category_name')})
     return redirect(index)
 
 def category_sub_category_items(request, category_name, sub_category_name):
-    all_products = Product.objects.all().order_by('-id')
     category_products = Product.objects.filter(sub_category__category__category_name=category_name,sub_category__sub_category_name=sub_category_name)
+    s = request.GET.get('sort')
+    if s == '1':
+        category_products = category_products.order_by('-id')
+    elif s == '2':
+        category_products = category_products.order_by('price')
+    elif s == '3':
+        category_products = category_products.order_by('-price')
+    elif s == '4':
+        category_products = category_products.order_by('name')
+    elif s == '5':
+        category_products = category_products.order_by('-name')
     if category_products:
-        return render(request, 'index.html', {"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name, 'sub_categories': Sub_Category.objects.all().order_by('sub_category_name')})
+        if s:
+            return render(request, 'index.html', {"category_products": category_products, "category": category_name, "sub_category": sub_category_name, 'sub_categories': Sub_Category.objects.all().order_by('sub_category_name'), 's': s})
+        else:
+            return render(request, 'index.html', {"category_products": category_products, "category": category_name,
+                                                  "sub_category": sub_category_name,
+                                                  'sub_categories': Sub_Category.objects.all().order_by(
+                                                      'sub_category_name')})
     return redirect(index)
 
 def privacy_view(request):
