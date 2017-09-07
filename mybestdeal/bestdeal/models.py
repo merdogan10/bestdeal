@@ -41,3 +41,10 @@ class Product(models.Model):
 
     def offdeal(self):
         return round(100*(self.old_price-self.price)/self.old_price)
+
+class Ads(models.Model):
+    amzn_assoc_asins = models.CharField(max_length=1000)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.amzn_assoc_asins+" - "+self.category.category_name

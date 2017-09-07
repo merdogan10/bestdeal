@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Product, Sub_Category, Category
+from .models import Product, Sub_Category, Category, Ads
 
 def index(request):
     all_products = Product.objects.all().order_by('-id')
@@ -16,11 +16,17 @@ def detail(request, slug, category_name, sub_category_name):
     all_products = Product.objects.all().order_by('-id')
     category_products = Product.objects.filter(sub_category__category__category_name=category_name,
                                                sub_category__sub_category_name=sub_category_name).order_by('-id')
+    amazon_ads = Ads.objects.filter(category__category_name=category_name).order_by('-id')
     try:
         product = Product.objects.get(slug=slug)
     except Product.DoesNotExist:
         return redirect(index)
-    return render(request, 'detail.html', {"product": product,"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name})
+    if amazon_ads:
+        return render(request, 'detail.html',
+                      {"product": product, "category_products": category_products, "all_products": all_products,
+                       "category": category_name, "sub_category": sub_category_name,"amazon_ads":amazon_ads[0].amzn_assoc_asins})
+    else:
+        return render(request, 'detail.html', {"product": product,"category_products": category_products,"all_products": all_products, "category": category_name, "sub_category": sub_category_name})
 
 def category_items(request, category_name):
     category_products = Product.objects.filter(sub_category__category__category_name=category_name).order_by('-id')
