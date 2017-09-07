@@ -4,12 +4,12 @@
     <meta property="og:url"           content="https://mybestdeal.today/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" />
     <meta property="og:type"          content="article" />
     <meta property="og:title"         content="{{ product.name|slice:":96" }}" />
-    <meta property="og:description"   content="{{ product.short_description|safe|slice:":200" }}" />
+    <meta property="og:description"   content="{{ product.long_description|safe|slice:":200" }}" />
     <meta property="og:image"         content="{{ product.photo_url }}" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mybestdealtoday">
     <meta name="twitter:title" content="{{ product.name|slice:":96" }}">
-    <meta name="twitter:description" content="{{ product.short_description|safe|slice:":200" }}">
+    <meta name="twitter:description" content="{{ product.long_description|safe|slice:":180" }}">
     <meta name="twitter:creator" content="@mybestdealtoday">
     <meta name="twitter:image" content="{{ product.photo_url }}">
     <meta name="twitter:domain" content="mybestdeal.today">

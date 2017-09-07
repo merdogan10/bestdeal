@@ -182,9 +182,10 @@
                             <hr>
                             <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/">{{ product.name }}</a></h4>
                             <h4 class="card-text">
-                                Price: <span class="text-danger">${{ product.price }}</span>
                                 {% if product.price != product.old_price %}
-                                  <del class="text-muted">${{ product.old_price }}</del> <strong class="text-success">{{ product.offdeal }}% off</strong>
+                                  <small><del class="text-muted">${{ product.old_price }}</del></small> <strong class="text-danger">${{ product.price }}</strong> <small><strong class="text-success">{{ product.offdeal }}% off</strong></small>
+                                {% else %}
+                                    <strong class="text-danger">${{ product.price }}</strong>
                                 {% endif %}
                             </h4>
                             <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" class="btn btn-info btn-block">Details</a>
@@ -214,12 +215,14 @@
                           <div class="card-block text-center">
                             <hr>
                             <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/">{{ product.name }}</a></h4>
-                            <h4 class="card-text">
-                                Price: <span class="text-danger">${{ product.price }}</span>
+                            <h3 class="card-text">
+
                                 {% if product.price != product.old_price %}
-                                  <del class="text-muted">${{ product.old_price }}</del> <strong class="text-success">{{ product.offdeal }}% off</strong>
+                                  <small><del class="text-muted">${{ product.old_price }}</del></small> <strong class="text-danger">${{ product.price }}</strong> <small><strong class="text-success">{{ product.offdeal }}% off</strong></small>
+                                {% else %}
+                                    <strong class="text-danger">${{ product.price }}</strong>
                                 {% endif %}
-                            </h4>
+                            </h3>
                             <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" class="btn btn-info btn-block">Details</a>
                             <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-block">See Deal</a>
                           </div>
