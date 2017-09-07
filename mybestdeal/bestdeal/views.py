@@ -16,7 +16,7 @@ def detail(request, slug, category_name, sub_category_name):
     all_products = Product.objects.all().order_by('-id')
     category_products = Product.objects.filter(sub_category__category__category_name=category_name,
                                                sub_category__sub_category_name=sub_category_name).order_by('-id')
-    amazon_ads = Ads.objects.filter(category__category_name=category_name).order_by('-id')
+    amazon_ads = Ads.objects.filter(sub_category__sub_category_name=sub_category_name).order_by('-id')
     try:
         product = Product.objects.get(slug=slug)
     except Product.DoesNotExist:

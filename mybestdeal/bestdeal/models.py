@@ -44,7 +44,7 @@ class Product(models.Model):
 
 class Ads(models.Model):
     amzn_assoc_asins = models.CharField(max_length=1000)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    sub_category = models.ForeignKey(Sub_Category, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.amzn_assoc_asins+" - "+self.category.category_name
+        return self.amzn_assoc_asins+" - "+self.sub_category.category.category_name+" - "+self.sub_category.sub_category_name
