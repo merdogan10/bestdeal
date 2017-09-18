@@ -1,0 +1,7 @@
+sudo apt-get install python3-pip
+pip3 install virtualenv
+git clone https://github.com/merdogan10/bestdeal.git
+source virtual/bin/activate
+pip3 install django
+curl https://getcaddy.com | bash
+pip3 install gunicorn
