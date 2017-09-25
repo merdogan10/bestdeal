@@ -15,6 +15,12 @@ class Sub_Category(models.Model):
     def __str__(self):
         return self.category.category_name + " - " + self.sub_category_name
 
+class Affiliate(models.Model):
+    name = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.name
+
 class Product(models.Model):
     name = models.CharField(max_length=1000)
     brand = models.CharField(max_length=100)
@@ -27,6 +33,7 @@ class Product(models.Model):
     sub_category = models.ForeignKey(Sub_Category,on_delete=models.CASCADE, null=True)
     date = models.DateTimeField(default=datetime.now, blank=True)
     slug = models.SlugField(('slug'), max_length=300, blank=True)
+    affiliate = models.ForeignKey(Affiliate, on_delete=models.CASCADE, null=True)
 
     def save(self, *args, **kwargs):
         if not self.id:

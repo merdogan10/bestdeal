@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Product, Sub_Category, Category, Ads
+from .models import Product, Sub_Category, Category, Ads, Affiliate
 
 def index(request):
     all_products = Product.objects.all().order_by('-id')
