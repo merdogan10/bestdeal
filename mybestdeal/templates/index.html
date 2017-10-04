@@ -46,7 +46,8 @@
                 {% endif %}
             </div>
             {% if not number_of_deals %}
-                <div class="col-md-8 reklam" style="height:150px;background: white;"></div>
+                <div class="col-md-8 reklam text-right">
+                <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=primemain&banner=097TDSG20MH99VMHNX82&f=ifr&linkID=e762160a2a8432e263d715adb678963e&t=zahitcakir-20&tracking_id=zahitcakir-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
                 </div>
             {% endif %}
 
@@ -181,13 +182,14 @@
                           <div class="card-block text-center">
                             <hr>
                             <h4 class="card-title mycardtitle"><a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/">{{ product.name }}</a></h4>
-                            <h4 class="card-text">
+                            <h3 class="card-text">
+
                                 {% if product.price != product.old_price %}
                                   <small><del class="text-muted">${{ product.old_price }}</del></small> <strong class="text-danger">${{ product.price }}</strong> <small><strong class="text-success">{{ product.offdeal }}% off</strong></small>
                                 {% else %}
                                     <strong class="text-danger">${{ product.price }}</strong>
                                 {% endif %}
-                            </h4>
+                            </h3>
                             <a href="/{{ product.sub_category.category.category_name }}/{{ product.sub_category.sub_category_name }}/{{ product.slug }}/" class="btn btn-info btn-block">Details</a>
                             <a target="_blank" href="{{ product.deal_link }}" class="btn btn-success btn-block">See Deal</a>
                           </div>
