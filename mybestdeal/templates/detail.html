@@ -49,8 +49,15 @@
 
 
             <div class="card col-md-12" style="background: white;">
-                <div class="col-md-11">
+                <div class="col-md-3 text-left" style="padding-top: 10px;">
                     <h4>{{ product.brand }}</h4>
+                </div>
+                <div class="col-md-9 text-right" style="padding-top: 10px;">
+                    <a class="text-right" href="https://www.{{ product.affiliate.website }}">
+                        <img class="card-img-top" src="/static/bestdeal/images/{{ product.affiliate.website }}_logo.jpg" height="20">
+                    </a>
+                </div>
+                <div class="col-md-11">
                     <h2>{{ product.name }}</h2>
                     <h6 class="text-muted">Posted on {{ product.date }}</h6>
                     <hr>
