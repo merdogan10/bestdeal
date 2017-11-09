@@ -28,7 +28,7 @@ class Product(models.Model):
     short_description = models.CharField(max_length=5000)
     photo_url = models.CharField(max_length=1000)
     deal_link = models.CharField(max_length=1000)
-    long_description = models.CharField(max_length=7000)
+    long_description = models.CharField(max_length=7000, null=True)
     old_price = models.FloatField()
     price = models.FloatField()
     sub_category = models.ForeignKey(Sub_Category,on_delete=models.CASCADE, null=True)
