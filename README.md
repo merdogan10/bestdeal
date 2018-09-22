@@ -10,10 +10,22 @@ Here are some screenshots:
 
 Homepage
 
+![home1](https://github.com/merdogan10/bestdeal/blob/master/ss/home1.png "Homepage 1")
 
+![home2](https://github.com/merdogan10/bestdeal/blob/master/ss/home2.png "Homepage 2")
 
-![home1](https://github.com/merdogan10/bestdeal/ss/home1.png "Homepage 1")
+Category
 
-![home2](bestdeal/ss/home2.png)
+![home2](https://github.com/merdogan10/bestdeal/blob/master/ss/category.png "Category")
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Sub Category
+
+![home2](https://github.com/merdogan10/bestdeal/blob/master/ss/subcategory.png "Sub Category")
+
+Search
+
+![home2](https://github.com/merdogan10/bestdeal/blob/master/ss/search.png "Search")
+
+Detail
+
+![home2](https://github.com/merdogan10/bestdeal/blob/master/ss/detail.png "Detail")
